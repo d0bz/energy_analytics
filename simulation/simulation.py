@@ -117,15 +117,15 @@ def plot_energy_analysis(df):
 df = pd.read_csv("scripts/simulation_data.csv", sep=';', parse_dates=["timestamp"])
 #july_df = df[df["timestamp"].dt.month == 7]
 
-start_date = pd.to_datetime("2024-03-01")
-end_date = pd.to_datetime("2024-04-30 23:59:59")
+start_date = pd.to_datetime("2024-01-01")
+end_date = pd.to_datetime("2024-12-31 23:59:59")
 july_df = df[(df["timestamp"] >= start_date) & (df["timestamp"] <= end_date)]
 
 result_df = simulate_energy_flow(july_df)
 plot_energy_analysis(result_df)
 
 # Save the updated DataFrame to a new file
-#output_file = "simulation_output.csv"
-#result_df.to_csv(output_file, index=False)
+output_file = "simulation_output.csv"
+result_df.to_csv(output_file, index=False)
 
-#print(f"Updated file saved as: {output_file}")
+print(f"Updated file saved as: {output_file}")

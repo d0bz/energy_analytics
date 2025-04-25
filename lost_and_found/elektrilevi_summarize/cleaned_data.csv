@@ -1,4 +1,4 @@
-date,consumption_kW
+datetime,total_consumption
 2022-03-01 01:00:00,2.003
 2022-03-01 02:00:00,2.224
 2022-03-01 03:00:00,1.918
